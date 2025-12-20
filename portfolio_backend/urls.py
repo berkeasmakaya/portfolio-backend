@@ -21,10 +21,12 @@ from django.conf.urls.static import static
 from rest_framework import routers
 from projects.views import ProjectViewSet
 from skills.views import SkillViewSet
+from contact.views import ContactViewSet
 
 router = routers.DefaultRouter()
 router.register(r'projects', ProjectViewSet)
 router.register(r'skills', SkillViewSet)
+router.register(r'contact', ContactViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
